@@ -1,12 +1,18 @@
-import React from 'react'
+import { SEO } from "@/components/SEO";
+import { Navigation } from "@/components/Navigation";
+import { Hero } from "@/components/Hero";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background flex items-center justify-center">
-      <div className="text-center space-y-4">
-        <h1 className="text-4xl font-bold text-foreground">Hello World</h1>
-        <p className="text-lg text-muted-foreground">This is going to be your softgen app, start by describing your project.</p>
-      </div>
-    </main>
-  )
+    <>
+      <SEO 
+        title="AI Growth Comm - AI Tools for Realtors & Small Business"
+        description="Discover, learn, and master AI tools that drive real business growth. Join 2,500+ realtors and small business owners growing with AI."
+      />
+      <Navigation />
+      <main>
+        <Hero />
+      </main>
+    </>
+  );
 }
