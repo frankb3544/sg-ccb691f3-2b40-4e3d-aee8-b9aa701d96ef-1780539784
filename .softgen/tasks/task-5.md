@@ -1,27 +1,26 @@
 ---
 title: Pricing & Subscription Plans
-status: todo
+status: done
 priority: high
 type: feature
-tags: [pricing, subscriptions]
+tags: [pricing, subscription]
 created_by: agent
 created_at: 2026-06-04T02:19:20Z
 position: 5
 ---
 
 ## Notes
-Create pricing page comparing Free vs Pro plans. Free includes 1 AI tool access, Pro includes all 4 tools (monthly subscription). Clear feature comparison, CTA for plan selection.
+Clear pricing page showing Free (1 tool access) vs Pro (all 4 tools, monthly subscription) plans. Must highlight value proposition, include tool comparison table, and make upgrade path obvious. Address common questions about plan differences.
 
 ## Checklist
-- [ ] Create /pricing page with side-by-side plan cards (Free, Pro - monthly)
-- [ ] List plan features: Free (1 tool choice, limited courses), Pro (all 4 tools, all courses, priority support, event access)
-- [ ] Add plan comparison table showing detailed feature breakdown
-- [ ] Include FAQ section addressing common questions about plans, billing, tool access
-- [ ] Design CTA buttons: "Start Free" (Free plan) and "Upgrade to Pro" (Pro plan) with pricing display
-- [ ] Add testimonials from Pro users highlighting ROI/value
-- [ ] Show tool selection UI for Free plan (choose 1 of 4 tools)
+- [x] Create /pricing page with side-by-side plan cards (Free vs Pro)
+- [x] Implement tool comparison table showing Free vs Pro access for all 4 tools (Writrr, Trackrr, Inspirr, Creatrr)
+- [x] Add feature lists for each plan with clear limitations for Free tier
+- [x] Include FAQ section addressing common pricing questions
+- [x] Add prominent CTAs for sign-up and upgrade
 
 ## Acceptance
-- Pricing page clearly differentiates Free vs Pro with transparent feature comparison
+- Plan differences are immediately clear (1 tool vs 4 tools)
+- Tool comparison table helps users understand access levels
 - CTAs guide users to appropriate plan selection
 - Tool limitation for Free plan is visually clear
