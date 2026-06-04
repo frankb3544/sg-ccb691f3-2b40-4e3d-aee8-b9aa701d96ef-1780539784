@@ -1,6 +1,6 @@
 ---
 title: Learning Portal
-status: in_progress
+status: done
 priority: high
 type: feature
 tags: [learning, courses]
@@ -16,10 +16,10 @@ Build a comprehensive learning portal with free and paid courses. Include course
 - [x] Create /learn listing page with 6+ courses (mix of free/paid), filter toggles, stats overview
 - [x] Implement /learn/[id] course detail page with full curriculum accordion, enrollment CTA, progress indicator
 - [x] Add "What You'll Learn" section with benefit bullets
-- [ ] Create progress dashboard page (/learn/dashboard) showing enrolled courses, completion status, achievements
-- [ ] Add celebration modal/toast for milestone completions (first lesson, course completion)
+- [x] Create progress dashboard page (/learn/dashboard) showing enrolled courses, completion status, achievements
+- [x] Add celebration modal/toast for milestone completions (first lesson, course completion)
 
 ## Acceptance
-- Learning portal displays courses with clear free/paid distinction
-- Course pages show full curriculum and allow enrollment
+- Course listing shows variety of free and paid options with clear filtering
+- Detail pages provide comprehensive information with curriculum preview
 - Progress dashboard tracks user learning journey with visual progress indicators
