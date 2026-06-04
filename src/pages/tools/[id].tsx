@@ -8,7 +8,40 @@ import { Star, Check, Quote, ArrowRight, Sparkles, FileText, Lightbulb, Users } 
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-const toolsData = {
+interface Review {
+  author: string;
+  role: string;
+  rating: number;
+  text: string;
+}
+
+interface SuccessStory {
+  name: string;
+  business: string;
+  result: string;
+  story: string;
+}
+
+interface UseCase {
+  title: string;
+  description: string;
+}
+
+interface ToolData {
+  name: string;
+  tagline: string;
+  description: string;
+  icon: React.ComponentType<{ className?: string }>;
+  rating: number;
+  reviews: number;
+  category: string[];
+  features: string[];
+  useCases: UseCase[];
+  reviewsList: Review[];
+  successStories: SuccessStory[];
+}
+
+const toolsData: Record<string, ToolData> = {
   writrr: {
     name: "Writrr",
     tagline: "AI-Powered Content Creation",
@@ -39,7 +72,7 @@ const toolsData = {
         description: "Craft engaging social media posts that build your brand and attract followers.",
       },
     ],
-    reviews: [
+    reviewsList: [
       {
         author: "Sarah Mitchell",
         role: "Real Estate Agent",
@@ -49,14 +82,14 @@ const toolsData = {
       {
         author: "James Chen",
         role: "Small Business Owner",
-        text: "I use Writrr for all my marketing content. It's like having a professional copywriter on my team 24/7.",
         rating: 5,
+        text: "I use Writrr for all my marketing content. It's like having a professional copywriter on my team 24/7.",
       },
       {
         author: "Maria Rodriguez",
         role: "Marketing Consultant",
-        text: "The quality of content is impressive. My clients love the results and I love the time savings.",
         rating: 4,
+        text: "The quality of content is impressive. My clients love the results and I love the time savings.",
       },
     ],
     successStories: [
@@ -104,7 +137,7 @@ const toolsData = {
         description: "Monitor your business metrics and get AI recommendations for improvement.",
       },
     ],
-    reviews: [
+    reviewsList: [
       {
         author: "David Park",
         role: "Real Estate Broker",
@@ -114,14 +147,14 @@ const toolsData = {
       {
         author: "Lisa Wong",
         role: "Business Consultant",
-        text: "The analytics dashboard gives me everything I need to advise my clients effectively.",
         rating: 5,
+        text: "The analytics dashboard gives me everything I need to advise my clients effectively.",
       },
       {
         author: "Robert Taylor",
         role: "Property Manager",
-        text: "Lead tracking has never been easier. I can see exactly where each prospect is in the funnel.",
         rating: 5,
+        text: "Lead tracking has never been easier. I can see exactly where each prospect is in the funnel.",
       },
     ],
     successStories: [
@@ -163,7 +196,7 @@ const toolsData = {
         description: "Plan your content calendar with AI-generated themes and topics.",
       },
     ],
-    reviews: [
+    reviewsList: [
       {
         author: "Emily Hart",
         role: "Marketing Director",
@@ -173,14 +206,14 @@ const toolsData = {
       {
         author: "Michael Torres",
         role: "Creative Director",
-        text: "The AI understands our brand and generates concepts that align perfectly with our vision.",
         rating: 5,
+        text: "The AI understands our brand and generates concepts that align perfectly with our vision.",
       },
       {
         author: "Rachel Green",
         role: "Entrepreneur",
-        text: "As a solo business owner, Inspirr gives me the creative firepower of a full marketing team.",
         rating: 4,
+        text: "As a solo business owner, Inspirr gives me the creative firepower of a full marketing team.",
       },
     ],
     successStories: [
@@ -222,7 +255,7 @@ const toolsData = {
         description: "Maintain consistent visual branding across all your marketing channels.",
       },
     ],
-    reviews: [
+    reviewsList: [
       {
         author: "Nicole Adams",
         role: "Real Estate Agent",
@@ -232,14 +265,14 @@ const toolsData = {
       {
         author: "Kevin Martinez",
         role: "Restaurant Owner",
-        text: "I create all my menu boards and social media graphics with Creatrr. It's incredibly intuitive.",
         rating: 5,
+        text: "I create all my menu boards and social media graphics with Creatrr. It's incredibly intuitive.",
       },
       {
         author: "Samantha Lee",
         role: "Event Planner",
-        text: "The template library is fantastic. I can customize everything to match each client's brand perfectly.",
         rating: 5,
+        text: "The template library is fantastic. I can customize everything to match each client's brand perfectly.",
       },
     ],
     successStories: [
@@ -415,7 +448,7 @@ export default function ToolDetailPage() {
                       What Our Users Say
                     </h2>
                     <div className="grid md:grid-cols-2 gap-6">
-                      {tool.reviews.map((review, index) => (
+                      {tool.reviewsList.map((review, index) => (
                         <Card key={index} className="relative">
                           <Quote className="absolute top-6 right-6 w-8 h-8 text-muted opacity-20" />
                           <CardHeader>
