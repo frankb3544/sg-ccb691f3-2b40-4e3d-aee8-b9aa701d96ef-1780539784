@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Trophy, Target, Clock, BookOpen, Award, CheckCircle2 } from "lucide-react";
+import Link from "next/link";
 
 const enrolledCourses = [
   {
@@ -160,7 +161,7 @@ export default function LearningDashboard() {
                   My Courses
                 </h2>
                 <Button variant="outline" asChild>
-                  <a href="/learn">Browse More Courses</a>
+                  <Link href="/learn">Browse More Courses</Link>
                 </Button>
               </div>
 
