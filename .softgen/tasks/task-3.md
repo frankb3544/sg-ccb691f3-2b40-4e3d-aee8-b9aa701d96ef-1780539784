@@ -1,6 +1,6 @@
 ---
 title: Learning Portal
-status: todo
+status: in_progress
 priority: high
 type: feature
 tags: [learning, courses]
@@ -10,16 +10,14 @@ position: 3
 ---
 
 ## Notes
-Build learning portal with course catalog, individual course pages with lessons, progress tracking dashboard, and celebration system for completed milestones.
+Build a comprehensive learning portal with free and paid courses. Include course listings with filter (free/paid), detailed course pages with curriculum breakdown, progress tracking visualization, and achievement celebrations. Must inspire users to learn and track their AI mastery journey.
 
 ## Checklist
-- [ ] Create /learn page with course grid (Free/Paid filters, categories: Beginner, Intermediate, Advanced)
-- [ ] Design course cards showing thumbnail, title, instructor, duration, lesson count, difficulty, price/free badge
-- [ ] Create /learn/[id] course detail page with curriculum, instructor info, enrollment CTA
-- [ ] Build /learn/[id]/lessons/[lessonId] lesson viewer with video embed, transcript, navigation
-- [ ] Create /dashboard/progress page showing enrolled courses, completion percentages, achievement badges
-- [ ] Add celebration UI (confetti animation, badge unlock modal) for course completions
-- [ ] Populate with 6-8 sample courses including "ChatGPT for Beginners", "AI Tools for Real Estate", "Small Biz Automation"
+- [x] Create /learn listing page with 6+ courses (mix of free/paid), filter toggles, stats overview
+- [x] Implement /learn/[id] course detail page with full curriculum accordion, enrollment CTA, progress indicator
+- [x] Add "What You'll Learn" section with benefit bullets
+- [ ] Create progress dashboard page (/learn/dashboard) showing enrolled courses, completion status, achievements
+- [ ] Add celebration modal/toast for milestone completions (first lesson, course completion)
 
 ## Acceptance
 - Learning portal displays courses with clear free/paid distinction
