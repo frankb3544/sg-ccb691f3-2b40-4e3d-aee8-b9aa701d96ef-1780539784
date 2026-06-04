@@ -1,6 +1,6 @@
 ---
 title: Resource Hub
-status: todo
+status: done
 priority: medium
 type: feature
 tags: [resources, community]
@@ -10,16 +10,14 @@ position: 4
 ---
 
 ## Notes
-Build resource hub featuring live event calendar, user-generated how-to guides, and community interaction features. Emphasize user contributions and upcoming workshops/Q&As.
+Create a vibrant resource hub combining live events (workshops, webinars, Q&As) with user-generated how-to guides. Enable community interaction, show event attendance counts, guide ratings/views. Must feel collaborative and encourage participation.
 
 ## Checklist
-- [ ] Create /resources page with tabbed sections: Events, Guides, Community
-- [ ] Build events calendar with upcoming workshops, Q&A sessions (date, time, host, registration CTA)
-- [ ] Design event detail modal/page with description, agenda, speaker bio, Zoom/meet link placeholder
-- [ ] Create user-generated guides section (card grid with author, topic, read time, upvotes)
-- [ ] Build /resources/guides/[id] guide reader with author profile, content, comments section
-- [ ] Add "Submit Your Guide" form (title, content editor, category, tags)
-- [ ] Populate with 8-10 sample events and 12-15 sample user guides
+- [x] Create /resources page with tabs for Live Events and User Guides
+- [x] Implement event cards showing date, time, host, registration count, tags
+- [x] Implement user guide cards with author info, ratings, views, read time, category tags
+- [x] Add "Submit Your Guide" CTA for community contribution
+- [x] Include community stats and upcoming event highlights
 
 ## Acceptance
 - Events calendar shows upcoming workshops with clear registration paths

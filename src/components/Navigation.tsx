@@ -28,10 +28,16 @@ export function Navigation() {
             >
               Tools
             </Link>
-            <Link href="/learn" className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors">
+            <Link
+              href="/learn"
+              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+            >
               Learn
             </Link>
-            <Link href="/resources" className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors">
+            <Link
+              href="/resources"
+              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+            >
               Resources
             </Link>
             <Link href="/pricing" className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors">
